@@ -1,0 +1,14 @@
+class Solution:    
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        #Create a dictionary where we will iterate using a Hashmap 
+        targetTable = {}
+        #For the key and value in the list 
+        for index,current in enumerate(nums):
+         #The goal is to return the sum we obtain this by subtaracting thetarget           with the current  
+            goal = target - current
+        #If the goal is in the list 
+            if goal in targetTable:
+        #return the solution with the index and the goal 
+                return [targetTable[goal],index]
+        #if not keep searching throough the hashmap
+            targetTable[current] = index
