@@ -1,0 +1,16 @@
+class Solution:
+    def isValid(self, s: str) -> bool:
+# Create a dictionary with the possible parenthesis for this problem
+        d = {'(':')','{':'}','[':']'}
+#Intialize the stack to store the input and to through scan through 
+        stack = []
+#iterate through the array s 
+        for i in s:
+#If while iterating you find a common element that is in the dictionary we created
+            if i in d:
+#place it in the stack
+                stack.append(i)
+#If the stack is empty or is not in the dictionary return False
+            elif len(stack)== 0 or d[stack.pop()]!=i:
+                return False 
+        return len(stack)==0
