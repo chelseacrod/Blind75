@@ -1,0 +1,7 @@
+class Solution:
+    def missingNumber(self, l):
+#In order to determine the correct sequence we must know the length of input (l)
+        n = len(l)
+#we will use the arithmetic series to determine the sequence and subtract by the sum of the array to determine what's missing from the sequence
+        arithSeries = (( n*(n+1)) //2 ) - sum (l)
+        return arithSeries
