@@ -1,0 +1,8 @@
+class Solution:
+    def climbStairs(self, n: int) -> int:
+        #starting point
+	    currentStep,previousStep =1,1
+	    for i in range(n-1):
+            # Calculate the amount of steps 
+		    currentStep,previousStep = currentStep + previousStep,currentStep
+      return currentStep
